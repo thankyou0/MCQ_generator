@@ -81,3 +81,6 @@ with st.form("user_inputs"):
   else:
     pass
   
+
+
+# run this file by ---> streamlit run d:\AI\MCQ_generator\StreamlitAPP.py
