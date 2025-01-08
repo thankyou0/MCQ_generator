@@ -1,0 +1,1 @@
+[2025-01-08 21:10:32,719] 91 root - ERROR - 'str' object has no attribute 'to_csv'

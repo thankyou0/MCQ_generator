@@ -1,0 +1,2 @@
+[2025-01-08 21:08:04,095] 91 root - ERROR - 'bool' object has no attribute 'to_csv'
+[2025-01-08 21:08:18,476] 91 root - ERROR - 'list' object has no attribute 'to_csv'

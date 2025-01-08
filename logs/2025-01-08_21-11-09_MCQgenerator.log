@@ -1,0 +1,5 @@
+[2025-01-08 21:11:17,246] 91 root - ERROR - `st.download_button()` can't be used in an `st.form()`.
+
+For more information, refer to the
+[documentation for forms](https://docs.streamlit.io/develop/api-reference/execution-flow/st.form).
+
