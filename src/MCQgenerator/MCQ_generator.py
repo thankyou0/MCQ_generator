@@ -3,15 +3,12 @@ import json
 import traceback
 import pandas as pd
 from dotenv import load_dotenv
-# from src.MCQgenerator.utils import read_file, get_table_data
-# from src.MCQgenerator.logger import logging
 
 
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain_huggingface import HuggingFaceEndpoint
 from langchain.chains import SequentialChain
-
 
 load_dotenv()
 
@@ -33,7 +30,7 @@ You are an expert MCQ maker. Given the above text, it is your job to \
 create a quiz of {number} multiple choice questions for {subject} students in {tone} tone.
 Make sure the questions are not repeated and check all the questions to be conforming to the text as well.
 Make sure to format your response like RESPONSE_JSON below and use it as a guide. \
-Ensure to make {number} MCQs.
+Ensure to make {number} number of MCQs, it's compulsory.
 here is my response structure, i want response to be in json with given structure.
 Strictly don't give any other text other than given below response_json format in response which is json format.
 {response_json}
@@ -84,16 +81,16 @@ generate_evaluate_chain=SequentialChain(chains=[quiz_chain, review_chain], input
 # NUMBER = 3  # Number of MCQs to generate
 # SUBJECT = "biology"  # Subject for the quiz
 # TONE = "simple"  # Tone of the quiz
-# RESPONSE_JSON = {
+# RESPONSE_JSON =  {
 #     "1": {
 #         "mcq": "multiple choice question",
 #         "options": {
 #             "a": "choice here",
 #             "b": "choice here",
 #             "c": "choice here",
-#             "d": "choice here",
+#             "d": "choice here"
 #         },
-#         "correct": "correct answer",
+#         "correct": "correct answer"
 #     },
 #     "2": {
 #         "mcq": "multiple choice question",
@@ -101,11 +98,22 @@ generate_evaluate_chain=SequentialChain(chains=[quiz_chain, review_chain], input
 #             "a": "choice here",
 #             "b": "choice here",
 #             "c": "choice here",
-#             "d": "choice here",
+#             "d": "choice here"
 #         },
-#         "correct": "correct answer",
+#         "correct": "correct answer"
+#     },
+#     "3": {
+#         "mcq": "multiple choice question",
+#         "options": {
+#             "a": "choice here",
+#             "b": "choice here",
+#             "c": "choice here",
+#             "d": "choice here"
+#         },
+#         "correct": "correct answer"
 #     }
 # }
+
 
 
 

@@ -34,7 +34,7 @@ with st.form("user_inputs"):
   uploaded_file = st.file_uploader("Choose a PDF or txt file")
 
   #input fields
-  mcq_count = st.number_input("Number of MCQs", min_value=1, max_value=10, value=4)
+  mcq_count = st.number_input("Number of MCQs", min_value=1, max_value=5, value=4)
   
   #subject
   subject = st.text_input("Insert the subject",max_chars=20)
@@ -62,6 +62,10 @@ with st.form("user_inputs"):
         st.write(quiz)
         st.write("Review:")
         st.write(review)
+        st.write("Quiz Table:")
+        st.write(get_table_data(quiz))
+        
+        
       except Exception as e:
         logging.error(e)
         st.error("An error occured while generating the MCQs")
