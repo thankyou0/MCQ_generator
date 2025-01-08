@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: MCQgenrator
+Version: 0.0.1
+Author: Thank you
+Author-email: sunny.savita@ineuron.ai
+Requires-Dist: huggingface_hub
+Requires-Dist: transformerS
+Requires-Dist: accelerate
+Requires-Dist: bitsandbytes
+Requires-Dist: langchain
+Requires-Dist: streamlit
+Requires-Dist: python-dotenv
+Requires-Dist: PyPDF2
